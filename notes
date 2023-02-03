@@ -1,0 +1,21 @@
+[publicKey] => BLEeHv9QLshSrT5Et6K_8P0WqBxsvZN-YRycg3Zm4PQ3LwZXnqtFTTTlL94_-mwYvrbV69hC9wDBvf8eTk8zgg0
+[privateKey] => Z15xXoPJvPDdfEVltIyQTqjG5jsKWZ4zq34RnPd0jO0
+
+
+{
+    "endpoint":"https://fcm.googleapis.com/fcm/send/fTMfTn0dm1M:APA91bG_kT11-7emF_TEUOW_X7FgT3rznFjh6w9w8MHAukV1BmhBdlPCN6jmbWWa7N8Od4ZO-t1BbM58ZUB1bxAQXqTgNfMl7zpu1Fli5vDnsImrwhtlTTNj1lod3RY0iP80msGHsrs8",
+    "expirationTime":null,
+    "keys":{
+        "p256dh":"BK5HpNCj2sARqzcvBjseYJT1Qlcha-ddJCVxxqsZyMaAwMJbh8iMGgcZAXgZKS-lXnHaQpt3S7ssOA4Lzk_tjSA",
+        "auth":"rNKQKCVZrXLT5mnbx5MGcA"
+    }
+}
+
+
+
+apt install curl git unzip
+curl -sS https://getcomposer.org/installer -o composer-setup.php
+HASH=`curl -sS https://composer.github.io/installer.sig`
+php -r "if (hash_file('SHA384', 'composer-setup.php') === '$HASH') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer  // Install globally
+composer require minishlink/web-push
